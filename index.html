@@ -22,13 +22,15 @@ camera.position.z = 5;
 	var light = new THREE.PointLight( 0xff0000, 2, 100 );
 light.position.set( 2, 2, 2 );
 scene.add( light );
-
+listener.simple_combo("shift right", function(e, count) {
+    cube.rotation.x += 0.01;
+});
    function render() {
 	requestAnimationFrame( render );
 	
-	cube.rotation.x += 0.01;
-	cube.rotation.y += 0.01;
-	cube.rotation.z += 0.01;
+//	cube.rotation.x += 0.01;
+//	cube.rotation.y += 0.01;
+	//cube.rotation.z += 0.01;
 	
 	renderer.render( scene, camera );
 }
