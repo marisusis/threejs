@@ -9,7 +9,8 @@
 	<body>
 		<script src="js/three.min.js"></script>
 		<script src="js/keypress-2.1.0.min.js"></script>
-		<script>		
+		<script>
+		var listener = new window.keypress.Listener();
 			listener.simple_combo("shift right", function() {
     console.log("poop");
 });
