@@ -9,7 +9,11 @@
 	<body>
 		<script src="js/three.min.js"></script>
 		<script src="js/keypress-2.1.0.min.js"></script>
-		<script>			    renderer = new THREE.WebGLRenderer();
+		<script>		
+			listener.simple_combo("shift right", function() {
+    console.log("poop");
+});
+renderer = new THREE.WebGLRenderer();
         renderer.setSize(window.innerWidth, window.innerHeight);
         document.body.appendChild(renderer.domElement);
         camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 500);
