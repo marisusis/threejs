@@ -19,9 +19,11 @@ renderer = new THREE.WebGLRenderer();
     scene = new THREE.Scene();	
     listener.simple_combo("down", function() {
 				cube.rotation.x += 0.05;
+				cube2.rotation.x += 0.05;
     });
         listener.simple_combo("up", function() {
 				cube.rotation.x -= 0.05;
+				cube2.rotation.x -= 0.05;
     });
 var geometry = new THREE.BoxGeometry( 1, 1, 1 );
 var material = new THREE.MeshPhongMaterial( { color: 0xffffff } );
