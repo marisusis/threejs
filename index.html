@@ -40,6 +40,9 @@ scene.add( light );
 	var light2 = new THREE.PointLight( 0xffff00, 2, 100 );
 light2.position.set( 2, -2, 2 );
 scene.add( light2 );
+var light3 = new THREE.PointLight( 0xcccc00, 2, 100 );
+light3.position.set( 2, -2, -2 );
+scene.add( light3 );
 
    function render() {
 	requestAnimationFrame( render );
