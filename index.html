@@ -28,7 +28,7 @@ renderer = new THREE.WebGLRenderer();
         document.body.appendChild(renderer.domElement);
         camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 500);
     scene = new THREE.Scene();
-var geometry = new THREE.BoxGeometry( 1, 1, 1 );
+var geometry = new THREE.DodecahedronGeometry( 1, 0 );
 var material = new THREE.MeshPhongMaterial( { color: 0xffffff } );
 var cube = new THREE.Mesh( geometry, material );
 scene.add( cube );
