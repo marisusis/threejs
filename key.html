@@ -1,2 +1,24 @@
 <html>
+<head></head>
+<body>
+  <script src="js/keypress-2.1.0.min.js"></script>
+  <script>
+    var listener = new window.keypress.Listener();
+    listener.simple_combo("shift s", function() {
+    console.log("You pressed shift and s");
+});
+
+// There are also a few other shortcut methods:
+
+// If we want to register a counting combo
+listener.counting_combo("tab space", function(e, count) {
+    console.log("You've pressed this " + count + " times.");
+});
+
+// If you want to register a sequence combo
+listener.sequence_combo("up up down down left right left right b a enter", function() {
+    lives = 30;
+}, true);
+  </script>
+</body>
 </html>
