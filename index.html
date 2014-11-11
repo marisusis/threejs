@@ -8,12 +8,7 @@
 	</head>
 	<body>
 		<script src="js/three.min.js"></script>
-		<script src="js/keyboard.js"></script>
-		<script>
-			   KeyboardJS.on('a', function() {
-    console.log('you pressed a!');
-});
-			    renderer = new THREE.WebGLRenderer();
+		<script>			    renderer = new THREE.WebGLRenderer();
         renderer.setSize(window.innerWidth, window.innerHeight);
         document.body.appendChild(renderer.domElement);
         camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 500);
