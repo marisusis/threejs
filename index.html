@@ -12,6 +12,7 @@
 		<script>
 		var listener = new window.keypress.Listener();
 			listener.simple_combo("shift right", function() {
+				cube.rotation.x += 0.01;
     console.log("poop");
 });
 renderer = new THREE.WebGLRenderer();
