@@ -12,15 +12,15 @@
 		<script>
 		var listener = new window.keypress.Listener();
 			listener.simple_combo("shift x", function() {
-				cube.rotation.x += 0.1;
+				cube.rotation.x += 0.05;
     console.log("Added +0.01 to rotation");
 });
 listener.simple_combo("shift y", function() {
-				cube.rotation.y += 0.1;
+				cube.rotation.y += 0.05;
     console.log("Added +0.01 to rotation");
 });
 listener.simple_combo("shift z", function() {
-				cube.rotation.z += 0.1;
+				cube.rotation.z += 0.05;
     console.log("Added +0.01 to rotation");
 });
 renderer = new THREE.WebGLRenderer();
