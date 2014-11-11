@@ -11,9 +11,27 @@
 		<script src="js/keypress-2.1.0.min.js"></script>
 		<script>
 		var listener = new window.keypress.Listener();
-			listener.simple_combo("shift x", function() {
+		
+renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+        camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 500);
+    scene = new THREE.Scene();	
+    listener.simple_combo("shift x", function() {
 				cube.rotation.x += 0.05;
 				cube2.rotation.x += 0.05;
+    console.log("Added +0.01 to rotation");
+});
+listener.simple_combo("shift a", function() {
+		camera.rotation.x += 0.05
+    console.log("Added +0.01 to rotation");
+});
+listener.simple_combo("shift b", function() {
+		camera.rotation.y += 0.05
+    console.log("Added +0.01 to rotation");
+});
+listener.simple_combo("shift c", function() {
+		camera.rotation.z += 0.05
     console.log("Added +0.01 to rotation");
 });
 listener.simple_combo("shift y", function() {
@@ -26,11 +44,6 @@ listener.simple_combo("shift z", function() {
 				cube2.rotation.z += 0.05;
     console.log("Added +0.01 to rotation");
 });
-renderer = new THREE.WebGLRenderer();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.body.appendChild(renderer.domElement);
-        camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 500);
-    scene = new THREE.Scene();
 var geometry = new THREE.DodecahedronGeometry( 1, 0 );
 var material = new THREE.MeshPhongMaterial( { color: 0xffffff } );
 var cube = new THREE.Mesh( geometry, material );
