@@ -16,7 +16,11 @@
             camera.position.set(0, 0, 100);
     scene = new THREE.Scene();
 	
-    renderer.render(scene, camera);
+   function render() {
+	requestAnimationFrame( render );
+	renderer.render( scene, camera );
+}
+render();
 		</script>
 	</body>
 </html>
