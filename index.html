@@ -8,7 +8,11 @@
 	</head>
 	<body>
 		<script src="js/three.min.js"></script>
+		<script src="js/keyboard.js"></script>
 		<script>
+			   KeyboardJS.on('a', function() {
+    console.log('you pressed a!');
+});
 			    renderer = new THREE.WebGLRenderer();
         renderer.setSize(window.innerWidth, window.innerHeight);
         document.body.appendChild(renderer.domElement);
