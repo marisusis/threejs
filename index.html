@@ -17,45 +17,12 @@ renderer = new THREE.WebGLRenderer();
         document.body.appendChild(renderer.domElement);
         camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 500);
     scene = new THREE.Scene();	
-    listener.simple_combo("shift x", function() {
+    listener.simple_combo("down", function() {
 				cube.rotation.x += 0.05;
-				cube2.rotation.x += 0.05;
-    console.log("Added +0.01 to rotation");
-});
-listener.simple_combo("shift a", function() {
-		camera.rotation.x += 0.05
-    console.log("Added +0.01 to rotation");
-});
-listener.simple_combo("shift s", function() {
-		camera.rotation.y += 0.05
-    console.log("Added +0.01 to rotation");
-});
-listener.simple_combo("shift d", function() {
-		camera.rotation.z += 0.05
-    console.log("Added +0.01 to rotation");
-});
-listener.simple_combo("shift f", function() {
-		camera.rotation.x -= 0.05
-    console.log("Added +0.01 to rotation");
-});
-listener.simple_combo("shift g", function() {
-		camera.rotation.y -= 0.05
-    console.log("Added +0.01 to rotation");
-});
-listener.simple_combo("shift h", function() {
-		camera.rotation.z -= 0.05
-    console.log("Added +0.01 to rotation");
-});
-listener.simple_combo("shift y", function() {
-				cube.rotation.y += 0.05;
-				cube2.rotation.y += 0.05;
-    console.log("Added +0.01 to rotation");
-});
-listener.simple_combo("shift z", function() {
-				cube.rotation.z += 0.05;
-				cube2.rotation.z += 0.05;
-    console.log("Added +0.01 to rotation");
-});
+    });
+        listener.simple_combo("up", function() {
+				cube.rotation.x -= 0.05;
+    });
 var geometry = new THREE.BoxGeometry( 1, 1, 1 );
 var material = new THREE.MeshPhongMaterial( { color: 0xffffff } );
 var cube = new THREE.Mesh( geometry, material );
