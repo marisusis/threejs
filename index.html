@@ -44,11 +44,11 @@ listener.simple_combo("shift z", function() {
 				cube2.rotation.z += 0.05;
     console.log("Added +0.01 to rotation");
 });
-var geometry = new THREE.DodecahedronGeometry( 1, 0 );
+var geometry = new THREE.BoxGeometry( 1, 1, 1 );
 var material = new THREE.MeshPhongMaterial( { color: 0xffffff } );
 var cube = new THREE.Mesh( geometry, material );
 scene.add( cube );
-var geometry5 = new THREE.DodecahedronGeometry( 1, 0 );
+var geometry5 = new THREE.BoxGeometry( 1, 1, 1 );
 var material5 = new THREE.MeshBasicMaterial( { color: 0xffffff, wireframe:true } );
 var cube2 = new THREE.Mesh( geometry5, material5 );
 scene.add( cube2 );
