@@ -20,17 +20,17 @@ renderer = new THREE.WebGLRenderer();
     scene = new THREE.Scene();	
     var element = document.getElementById("main_dir");
     listener.simple_combo("right", function() {
-				cube.position.x += 0.05;
+				cube.position.x += 0.03;
 			
-				element.innerHTML = "Down";
+				element.innerHTML = "Right";
     });
     listener.simple_combo("up", function() {
-				cube.position.y += 0.05;
+				cube.position.y += 0.03;
 			
 				element.innerHTML = "Up";
     });
     listener.simple_combo("down", function() {
-				cube.position.y -= 0.05;
+				cube.position.y -= 0.03;
 			
 				element.innerHTML = "Down";
     });
@@ -39,8 +39,8 @@ renderer = new THREE.WebGLRenderer();
 				element.innerHTML = "Maggot";
     });
         listener.simple_combo("left", function() {
-				cube.position.x -= 0.05;
-				element.innerHTML = "Up";
+				cube.position.x -= 0.03;
+				element.innerHTML = "Left";
     });
 var geometry = new THREE.BoxGeometry( 1, 1, 1 );
 var material = new THREE.MeshPhongMaterial( { color: 0xffffff } );
