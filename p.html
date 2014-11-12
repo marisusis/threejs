@@ -83,7 +83,14 @@ function animate() {
 }
 
 function render() {
+geometry.colors = colors;
+for( var i = 0; i < geometry.vertices.length; i++ ) {
+    
+        // random color
+        colors[i] = new THREE.Color();
+        colors[i].setHSL( Math.random(), 1.0, 0.5 );
 
+    }
     // rotate
     pointCloud.rotation.x += 0.005;
     pointCloud.rotation.y += 0.005;
