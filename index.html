@@ -19,8 +19,18 @@ renderer = new THREE.WebGLRenderer();
         camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 500);
     scene = new THREE.Scene();	
     var element = document.getElementById("main_dir");
-    listener.simple_combo("down", function() {
+    listener.simple_combo("right", function() {
 				cube.position.x += 0.05;
+			
+				element.innerHTML = "Down";
+    });
+    listener.simple_combo("up", function() {
+				cube.position.y += 0.05;
+			
+				element.innerHTML = "Up";
+    });
+    listener.simple_combo("down", function() {
+				cube.position.y -= 0.05;
 			
 				element.innerHTML = "Down";
     });
@@ -28,7 +38,7 @@ renderer = new THREE.WebGLRenderer();
 			
 				element.innerHTML = "Maggot";
     });
-        listener.simple_combo("up", function() {
+        listener.simple_combo("left", function() {
 				cube.position.x -= 0.05;
 				element.innerHTML = "Up";
     });
@@ -53,9 +63,9 @@ scene.add( light4 );
 
    function render() {
 	requestAnimationFrame( render );
-	//cube.rotation.x += 0.01;
-	//cube.rotation.y += 0.01;
-	//cube.rotation.z += 0.01;
+	cube.rotation.x += 0.01;
+	cube.rotation.y += 0.01;
+	cube.rotation.z += 0.01;
 	
 	renderer.render( scene, camera );
 }
