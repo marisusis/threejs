@@ -46,7 +46,12 @@ function init() {
 
     // point cloud geometry
     //var geometry = new THREE.SphereGeometry( 100, 32, 16 );
-    var geometry = new THREE.OctahedronGeometry( 100, 10 );
+    var points = [];
+for ( var i = 0; i < 10; i ++ ) {
+	points.push( new THREE.Vector3( Math.sin( i * 0.2 ) * 15 + 50, 0, ( i - 5 ) * 2 ) );
+
+}
+var geometry = new THREE.LatheGeometry( points );
     
     // vertex colors
     var colors = [];
