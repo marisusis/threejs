@@ -59,16 +59,6 @@ var geometry = new THREE.SphereGeometry( 100, 32, 32 );
 
     }
     geometry.colors = colors;
-    listener.simple_combo("r", function() {
-				for( var i = 0; i < geometry.vertices.length; i++ ) {
-    
-        // random color
-        colors[i] = new THREE.Color();
-        colors[i].setHSL( 0.1, 1.0, 0.5 );
-
-    }
-    geometry.colors = colors;;
-    });
     
 
     // material
