@@ -64,8 +64,7 @@
 				scene = new THREE.Scene();
 				scene.fog = new THREE.FogExp2( 0x000000, 0.0007 );
 				var geo = new THREE.BoxGeometry( 500, 500, 500 );
-				var cubeTexture = THREE.ImageUtils.loadTexture('https://avatars1.githubusercontent.com/u/7330137?v=3&s=48');
-var mat = new THREE.MeshBasicMaterial( { map: cubeTexture } );
+var mat = new THREE.MeshNormalMaterial();
 				var meshe = new THREE.Mesh( geo, mat );
 				scene.add( meshe );
 				geometry = new THREE.Geometry();
