@@ -22,7 +22,6 @@
 
 <script src="http://threejs.org/build/three.min.js"></script>
 		<script>
-		var listener = new window.keypress.Listener();
 			var renderer, scene, camera, pointCloud;
 
 init();
@@ -59,7 +58,6 @@ var geometry = new THREE.SphereGeometry( 100, 32, 32 );
 
     }
     geometry.colors = colors;
-    
 
     // material
     material = new THREE.PointCloudMaterial( {
