@@ -44,8 +44,7 @@ renderer = new THREE.WebGLRenderer();
 				element.innerHTML = "Left";
     });
 var geometry = new THREE.BoxGeometry( 1, 1, 1 );
-var cubeTexture = THREE.ImageUtils.loadTexture('https://avatars1.githubusercontent.com/u/7330137?v=3&s=48');
-var material = new THREE.MeshLambertMaterial({ map: cubeTexture });
+var material = new THREE.MeshPhongMaterial( { color: 0xffffff } );
 var cube = new THREE.Mesh( geometry, material );
 scene.add( cube );
 
